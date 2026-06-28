@@ -1,0 +1,48 @@
+{
+  "name": "Worker",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the worker"
+    },
+    "employee_id": {
+      "type": "string",
+      "description": "Unique employee identifier"
+    },
+    "department": {
+      "type": "string",
+      "enum": [
+        "Construction",
+        "Maintenance",
+        "Operations",
+        "Logistics",
+        "Administration",
+        "Other"
+      ],
+      "description": "Department the worker belongs to"
+    },
+    "role": {
+      "type": "string",
+      "description": "Job title or role"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "description": "Employment status"
+    }
+  },
+  "required": [
+    "full_name",
+    "employee_id",
+    "department"
+  ]
+}

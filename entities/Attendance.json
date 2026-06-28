@@ -1,0 +1,45 @@
+{
+  "name": "Attendance",
+  "type": "object",
+  "properties": {
+    "worker_id": {
+      "type": "string",
+      "description": "Reference to the worker"
+    },
+    "worker_name": {
+      "type": "string",
+      "description": "Cached worker name for display"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Attendance date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "present",
+        "absent"
+      ],
+      "description": "Attendance status"
+    },
+    "additional_hours": {
+      "type": "number",
+      "description": "Extra/overtime hours worked"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes"
+    },
+    "updated_by": {
+      "type": "string",
+      "description": "Email of the user who last saved this record"
+    }
+  },
+  "required": [
+    "worker_id",
+    "worker_name",
+    "date",
+    "status"
+  ]
+}
